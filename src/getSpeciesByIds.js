@@ -1,7 +1,19 @@
+/* eslint-disable global-require */
 const data = require('../data/zoo_data');
+// se a especie index contiver o id passsado como parametro eu vou retornar uma array com esse;
+// toContain()
 
-function getSpeciesByIds(ids) {
-  // seu código aqui
+// console.log(Object.entries(species[0]));
+// const { species } = require('../data/zoo_data');
+
+function getSpeciesByIds(...ids) {
+  const { species } = require('../data/zoo_data');
+  // console.log(species);
+
+  // eslint-disable-next-line max-len
+  const animaisFiltrados = species.filter((animal) => ids.find((id) => id === animal.id));
+
+  return animaisFiltrados;
 }
 
 module.exports = getSpeciesByIds;
