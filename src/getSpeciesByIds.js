@@ -8,9 +8,6 @@ const data = require('../data/zoo_data');
 
 function getSpeciesByIds(...ids) {
   const { species } = require('../data/zoo_data');
-  // console.log(species);
-
-  // eslint-disable-next-line max-len
   const animaisFiltrados = species.filter((animal) => ids.find((id) => id === animal.id));
 
   return animaisFiltrados;
