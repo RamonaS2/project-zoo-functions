@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const data = require('../data/zoo_data');
 const { employees } = require('../data/zoo_data');
 
@@ -10,7 +11,6 @@ function getEmployeeByName(employeeName) {
     const semResultado = {};
     return semResultado;
   }
-  // eslint-disable-next-line max-len
   const funcionarios = employees.find((fucionarios) => fucionarios.firstName === employeeName || fucionarios.lastName === employeeName);
 
   return funcionarios;
